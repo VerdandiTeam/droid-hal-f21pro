@@ -7,7 +7,19 @@
 %define vendor_pretty Qin
 %define device_pretty F21 Pro
 
+%define droid_target_aarch64 1
+
 %define installable_zip 1
+
+%define makefstab_skip_entries / /product /system /system_root /vendor
+
+%define straggler_files \
+/bugreports\
+/cache\
+/d\
+/sdcard\
+/system_ext\
+%{nil}
 
 %include rpm/dhd/droid-hal-device.inc
 
